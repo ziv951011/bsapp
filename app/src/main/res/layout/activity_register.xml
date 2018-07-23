@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/et_userName"
+        app:met_floatingLabelText="请输入用户名"
+        android:layout_margin="10px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:met_floatingLabel="normal"
+        android:hint="请输入用户名" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/et_passWord"
+        app:met_floatingLabelText="请输入密码"
+        android:layout_margin="10px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:met_floatingLabel="normal"
+        android:inputType="textPassword"
+        android:hint="请输入密码" />
+
+
+    <Button
+        android:id="@+id/btn_register"
+        android:textColor="#ffffff"
+        android:text="@string/login"
+        android:background="@color/colorAccent"
+        android:layout_margin="20px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</com.zhy.autolayout.AutoLinearLayout>

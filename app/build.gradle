@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    defaultConfig {
+        applicationId "com.zivbs.zivbs"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    sourceSets {
+        main.jniLibs.srcDirs = ['libs']
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:25.3.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    //如果你想应用能够兼容Android6.0，请添加此依赖(org.apache.http.legacy.jar)
+    implementation 'cn.bmob.android:http-legacy:1.0'
+    // Butterknife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    // Dagger1
+    implementation 'com.google.dagger:dagger:2.14.1'
+    annotationProcessor "com.google.dagger:dagger-compiler:2.14.1"
+    // fragment 快速搭建
+    implementation 'com.github.open-android:FragmentTabhostUtils:0.5.0'
+    // 屏幕适配
+    implementation 'com.zhy:autolayout:1.4.5'
+    implementation 'com.android.support:recyclerview-v7:25.3.0'
+    // BaseAdapter
+    implementation 'com.zhy:base-rvadapter:3.0.3'
+    // 轮播
+    implementation 'com.youth.banner:banner:1.4.10'
+    // materialedittext
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    // Okhttp 这里便于测试api接口 后期换成Retrofit
+    implementation 'com.zhy:okhttputils:2.6.2'
+    // 解析Json数据
+    implementation 'com.google.code.gson:gson:2.8.5'
+}
